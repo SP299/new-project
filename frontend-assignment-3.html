@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>frontend assignment 3</title>
+        <meta name="UTF-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            html,body{
+                padding: 0px;
+                margin: 0px;
+                font-size: 14px;
+            }
+            img{
+                background-size: cover;
+                height: 100vh;
+                width: 100vw;
+                position: absolute;
+            }
+            .cntn{
+                position: absolute;
+                top: 0px;
+                left: 0px;
+            }
+            .top_bar{
+                height: 40px;
+                background-color: rgba(64,144,172,0.65);
+                padding: 10px 0px 0px 20px;
+            }
+            .top_bar .fa{
+                color: white;
+                font-size: 20px;
+                background-color: rgba(64,144,172,1);
+                padding: 5px;
+                margin-left: 5px;
+            }
+            .bod{
+                margin-left: 5px;
+            }
+            .srch{
+                width: 120px;
+                padding: 10px 0px 5px 0px;
+                border: 0px;
+                outline: none;
+                margin-left: 5px;
+                background-color: rgba(64,144,172,1);
+            }
+            .srch:focus{
+                background-color: white;
+            }
+            .tra{
+                margin: 0px 740px;
+                color: white;
+                font-size: 20px;
+            }
+            .nv{
+                background-color: rgba(128,128,128,0.3);
+                height: 30px;
+                color: white;
+                padding: 10px 0px 0px 25px;
+            }
+            .nv .fa{
+                margin-left: 1670px;
+            }
+            .sm{
+                margin-left: 6px;
+            }
+
+
+            .board{
+                display: flex; 
+                z-index: 9999;}
+            .board>div{
+                margin: 5px;
+                }
+            .td{
+                width: 235px;
+                background-color:#f0f0f0; 
+                padding: 10px 20px 10px 10px; 
+                align-self:flex-start;
+                border-radius: 5px;
+                }
+            .spc{
+                margin-right: 123px ;
+            }
+            .lrn{
+                width:98%; 
+                padding:5px;
+                border: 0px;
+                border-radius: 5px;
+                }
+            .lc{
+                padding-top: 10px;
+                }
+            .anc{
+                padding: 10px 0px 10px 0px;
+                }
+            .anc:hover{
+                opacity: 0.7;
+            }
+            .txtrea{
+                width: 100%;
+                height: 70px;
+                border: 0px;
+                margin-top: 10px;
+                letter-spacing: 2px;
+            }
+            .smt{
+                background-color: olive;
+                color: white;
+                border: 0px;
+                outline: none;
+                border-radius: 4px;
+                font-size: 1.2em;
+                padding: 8px;
+                margin-top: 10px;
+                margin-right: 2px;
+            }
+            .smt:hover{
+                opacity: 0.7;
+            }
+            .fa-times{
+                margin-top: 10px;
+                font-size: 2em;
+            }
+            .st1{
+                padding: 10px;
+                background-color: white;
+                border-radius: 5px;
+                margin: 10px 0px;
+            }
+            .fa-pencil{
+                float: right;
+                padding: 0px;
+                display: none;
+            }
+            .st1:hover{
+            opacity: 0.6;
+            }
+            .st1:hover .fa-pencil{
+                display: block;
+            }
+            .top_bar .fa:hover{
+                opacity: 0.7;
+            }
+            .nv .fa:hover{
+                opacity: 0.7;
+            }
+            .fa-times:hover{
+                opacity: 0.7;
+            }
+        </style>
+    </head>
+    <body>
+         <img src="waterdrop.jpg" alt="waterdrop">
+         <div class="cntn">
+        <div class="top_bar">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            <i class="fa fa-list" aria-hidden="true"><span class="bod">Boards</span></i>
+            <input type="text" class="srch">
+            <span class="tra">Tralala</span>
+            <i class="fa fa-plus" aria-hidden="true"></i>
+            <i class="fa fa-user" aria-hidden="true"></i>
+        </div>
+        <div class="nv">
+            <span>Frontend Training</span>
+            <i class="fa fa-ellipsis-v" aria-hidden="true"><span class="sm">Show menu</span></i>
+        </div>
+
+        <div class="board">
+            <div class="td">
+                <span class="spc">To Do</span>
+                <span>...</span>    
+                <div class="st1">
+                    Learn HTML
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="st1">
+                    Learn CSS
+                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="st1">
+                    Learn JavaScript<i class="fa fa-pencil" aria-hidden="true"></i>
+                </div>
+                <div class="anc">+Add another card</div>
+            </div>
+            <div class="td">
+                <span class="spc">Doing</span>
+                <span>...</span>
+                <div class="st1">
+                    Prepare resume
+                </div>
+                <input type="text" placeholder="Enter a title for this card ..." class="txtrea lrn">
+               <input type="submit" value="Add Card" class="smt">
+               <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+            <div class="td">
+                <span class="spc">Testing/Verifying</span>
+                <span>...</span>   
+                <div class="st1">
+                    Twitter app frontend
+                </div> 
+                <div class="anc">+Add another card</div>
+            </div>
+            <div class="td">
+                <span class="spc">Deploying</span>
+                <span>...</span>    
+                <div class="st1">
+                    Twitter app backend
+                </div> 
+                <div class="anc">+Add another card</div>
+            </div>
+            <div class="td">
+                <span class="spc">Done</span>
+                <span>...</span>
+                <div class="anc">+Add card</div>
+            </div>
+            <div class="td">
+                <div class="anc">+Add another list</div>
+            </div>
+            <div class="td">
+                <input type="text" placeholder="Enter ilst title ..." class="txtrea lrn">
+               <input type="submit" value="Add Card" class="smt">
+               <i class="fa fa-times" aria-hidden="true"></i>
+            </div>
+       </div>
+        
+    </body>
+</html>
